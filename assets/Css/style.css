@@ -1,0 +1,236 @@
+:root {
+  --purple: hsl(259, 100%, 65%); 
+  --light-red: hsl(0, 100%, 67%); 
+  --white: hsl(0, 0%, 100%); 
+  --light-grey: hsl(0, 0%, 86%); 
+  --smokey-grey: hsl(0, 1%, 44%); 
+  --off-black: hsl(0, 0%, 8%); 
+  --placeholder-gray: hsl(0, 1%, 56%); 
+  --blue-footer:hsl(234, 81%, 35%);
+  --footer-hover:hsl(51, 100%, 38%);
+  --footer-color:hsl(60, 1%, 39%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grey);
+}
+.container {
+  width: 650px;
+  max-width: 90%;
+  padding: 35px;
+  border-radius: 15px;
+  border-bottom-right-radius: 130px;
+  box-shadow: 3px 6px 9px rgb(0, 0, 0, 0.3);
+  background-color: var(--white);
+}
+.container .form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 45px;
+  padding-bottom: 35px;
+  border-bottom: 2px solid var(--light-grey);
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-container label {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--smokey-grey);
+}
+.input-container input {
+  width: 100%;
+  /* height: 48px; */
+  padding: 10px 14px;
+  margin: 6px auto;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+  outline: none;
+  color: var(--off-black);
+  caret-color: var(--purple);
+  transition: all .3s;
+}
+::placeholder{
+  color: var(--placeholder-gray);
+}
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.input-container input:focus {
+  border-color: var(--purple);
+}
+.input-container small {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--light-red);
+}
+ button[type="submit"] {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  right: 0;
+  /*or=> top: 73%; */
+  bottom: -30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s;
+  background: var(--purple);
+  overflow: hidden;
+}
+button[type="submit"]:hover {
+  background-color: var(--off-black);
+}
+footer{
+  text-align: center;
+  color: var(--footer-color);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+footer a.moody{
+color: var(--blue-footer);
+font-weight: 600;
+text-shadow: 1px 1px var(--smokey-grey);
+text-decoration: none;
+}
+footer a.moody:hover{
+  color: var(--footer-hover);
+text-shadow: 0 1px var(--smokey-grey);
+
+}
+ .result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ .result-container .output {
+  font-family: pop;
+  font-style: italic;
+  line-height: 64px;
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--off-black);
+}
+ .output span {
+  color: var(--purple);
+  font-style: italic;
+}
+
+/* Interact styling */
+.input-container.invalid input {
+  border-color: var(--light-red);
+}
+.input-container.invalid label {
+  color: var(--light-red);
+  font-weight: bold;
+}
+@font-face {
+  font-family: pop;
+  src: url(../fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+
+
+
+
+
+
+/* Responsive */
+ @media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  .container .form {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .form button[type="submit"] {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+  }
+ 
+  .container .result-container .output {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .container .result-container .output span {
+    font-size: 40px;
+  }
+  footer{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .container .result-container .output {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  .container .result-container .output span {
+    font-size: 30px;
+  }
+  .input-container input {
+    padding:4px 4px 4px 8px ;
+  }
+  button[type="submit"]{
+    width: 50px;
+    height: 50px;
+  }
+ 
+  footer{
+    font-size: .89rem;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    width: 98%;
+  }
+  .input-container label{
+font-size:.6rem;
+  }
+  .input-container input {
+    padding:2px 2px 2px 9px ;
+    font-size: medium;
+  }
+  .input-container small{
+    font-size: 10px;
+  }
+  button[type="submit"]{
+    width: 38px;
+    height: 38px;
+  }
+ 
+  .result-container .output {
+    font-size: 28px;
+    line-height: 28px;
+
+    
+  }
+  .container .result-container .output span {
+    font-size: 26px;
+  }
+  footer{
+    font-size: .75rem;
+  }
+}
