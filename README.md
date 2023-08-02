@@ -4,8 +4,8 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com  ) 
-- Live Site URL: [👉🏻From Here](https://engmoody.github.io/ahmed/)
+- Solution URL:[👉🏻From Here](https://github.com/EngMoody/Frontend-Mentor-Age-calculator-app-)
+- Live Site URL: [👉🏻From Here]( https://engmoody.github.io/Frontend-Mentor-Age-calculator-app-/)
 ## My process
 
 ### Built with
